@@ -1,0 +1,41 @@
+{
+  "id" : "10000c2b-d237-4b30-90ea-464f773957a0",
+  "name" : "v1_oauth2_token",
+  "request" : {
+    "url" : "/v1/oauth2/token",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalTo" : "grant_type=client_credentials",
+      "caseInsensitive" : false
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"scope\":\"https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token https://uri.paypal.com/services/payments/futurepayments https://uri.paypal.com/services/invoicing https://uri.paypal.com/services/vault/payment-tokens/read https://uri.paypal.com/services/disputes/read-buyer https://uri.paypal.com/services/payments/realtimepayment https://uri.paypal.com/services/disputes/update-seller https://uri.paypal.com/services/payments/payment/authcapture openid https://uri.paypal.com/services/disputes/read-seller Braintree:Vault https://uri.paypal.com/services/payments/refund https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/pricing/quote-exchange-rates/read https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/payments/payouts https://uri.paypal.com/services/vault/payment-tokens/readwrite https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/shipping/trackers/readwrite https://uri.paypal.com/services/subscriptions https://uri.paypal.com/services/applications/webhooks\",\"access_token\":\"A21AAJ_q2-4k86PjB-0EgWtuSOlzoegmhPqUl-EGZzK310_qKBXaqVQMqQQuIUuSoeuFXK_1_xMwBZZbGG08MfaYZEGfz4IEg\",\"token_type\":\"Bearer\",\"app_id\":\"APP-80W284485P519543T\",\"expires_in\":32400,\"nonce\":\"2024-07-03T15:15:58Zgy_fukg9hE4xKPGeWOklJric_k4wFTw7N73GL7Hg5pw\"}",
+    "headers" : {
+      "x-paypal-token-service" : "IAAS",
+      "pragma" : "no-cache",
+      "http_x_pp_az_locator" : "ccg18.slc",
+      "cache-control" : "max-age=0, no-cache, no-store, must-revalidate",
+      "traceparent" : "00-0000000000000000000b4d4bd53f02e2-93418d0597962041-01",
+      "strict-transport-security" : "max-age=31536000; includeSubDomains",
+      "paypal-debug-id" : "b4d4bd53f02e2",
+      "server" : "nginx",
+      "server-timing" : "traceparent;desc=\"00-0000000000000000000b4d4bd53f02e2-4c6608bb9a549e81-01\"",
+      "content-type" : "application/json",
+      "x-backend-info" : "v=1;name=2k1u3gOGb2cebCyZJujTUN--F_ccg18_wju_origin_api_m_2_sandbox_paypal_com;ip=34.106.111.220;port=443;ssl=1;max=200;ka_ns=0;tka_s=300;tki_s=10;tkp=3;host=api-m.sandbox.paypal.com;min_tls=;max_tls=;sni=edge.sandbox.paypal.com;cert_host=edge.sandbox.paypal.com;ciphers=;check_cert=1;no_reneg=1;to_ns=1000000000;fbto_ns=59000000000;bbto_ns=10000000000",
+      "Accept-Ranges" : "none",
+      "Via" : "1.1 varnish, 1.1 varnish",
+      "Edge-Control" : "max-age=0",
+      "Date" : "Wed, 03 Jul 2024 15:15:58 GMT",
+      "X-Served-By" : "cache-qpg1267-QPG, cache-qpg1267-QPG, cache-hyd1100021-HYD",
+      "X-Cache" : "MISS, MISS, MISS",
+      "X-Cache-Hits" : "0, 0, 0",
+      "X-Timer" : "S1720019758.188068,VS0,VE406",
+      "Vary" : "Accept-Encoding"
+    }
+  },
+  "uuid" : "10000c2b-d237-4b30-90ea-464f773957a0",
+  "persistent" : true,
+  "insertionIndex" : 1
+}

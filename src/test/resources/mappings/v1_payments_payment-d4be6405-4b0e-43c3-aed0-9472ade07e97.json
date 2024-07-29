@@ -1,0 +1,40 @@
+{
+  "id" : "d4be6405-4b0e-43c3-aed0-9472ade07e97",
+  "name" : "v1_payments_payment",
+  "request" : {
+    "url" : "/v1/payments/payment",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"redirect_urls\":{\"return_url\":\"https://example.com/return\",\"cancel_url\":\"https://example.com/cancel\"},\"transactions\":[{\"amount\":{\"total\":\"30.11\",\"currency\":\"USD\",\"details\":{\"insurance\":\"0.01\",\"shipping\":\"0.03\",\"shipping_discount\":\"-1.00\",\"subtotal\":\"30.00\",\"tax\":\"0.07\",\"handling_fee\":\"1.00\"}},\"soft_descriptor\":\"ECHI5786786\",\"item_list\":{\"shipping_address\":{\"country_code\":\"US\",\"city\":\"San Jose\",\"phone\":\"011862212345678\",\"state\":\"CA\",\"recipient_name\":\"Brian Robinson\",\"postal_code\":\"95131\",\"line2\":\"Unit #34\",\"line1\":\"4th Floor\"},\"items\":[{\"quantity\":\"5\",\"price\":\"3\",\"name\":\"hat\",\"description\":\"Brown hat.\",\"tax\":\"0.01\",\"currency\":\"USD\",\"sku\":\"1\"},{\"quantity\":\"1\",\"price\":\"15\",\"name\":\"handbag\",\"description\":\"Black handbag.\",\"tax\":\"0.02\",\"currency\":\"USD\",\"sku\":\"product34\"}]},\"custom\":\"EBAY_EMS_90048630024435\",\"description\":\"The payment transaction description.\",\"invoice_number\":\"48787589673\",\"payment_options\":{\"allowed_payment_method\":\"INSTANT_FUNDING_SOURCE\"}}],\"intent\":\"sale\",\"payer\":{\"payment_method\":\"paypal\"},\"note_to_payer\":\"Contact us for any questions on your order.\"}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"id\":\"PAYID-M2CWWMA1J304182XF146063N\",\"intent\":\"sale\",\"state\":\"created\",\"payer\":{\"payment_method\":\"paypal\"},\"transactions\":[{\"amount\":{\"total\":\"30.11\",\"currency\":\"USD\",\"details\":{\"subtotal\":\"30.00\",\"tax\":\"0.07\",\"shipping\":\"0.03\",\"insurance\":\"0.01\",\"handling_fee\":\"1.00\",\"shipping_discount\":\"-1.00\"}},\"description\":\"The payment transaction description.\",\"custom\":\"EBAY_EMS_90048630024435\",\"invoice_number\":\"48787589673\",\"soft_descriptor\":\"ECHI5786786\",\"payment_options\":{\"allowed_payment_method\":\"INSTANT_FUNDING_SOURCE\",\"recurring_flag\":false,\"skip_fmf\":false},\"item_list\":{\"items\":[{\"name\":\"hat\",\"sku\":\"1\",\"description\":\"Brown hat.\",\"price\":\"3.00\",\"currency\":\"USD\",\"tax\":\"0.01\",\"quantity\":5},{\"name\":\"handbag\",\"sku\":\"product34\",\"description\":\"Black handbag.\",\"price\":\"15.00\",\"currency\":\"USD\",\"tax\":\"0.02\",\"quantity\":1}],\"shipping_address\":{\"recipient_name\":\"Brian Robinson\",\"line1\":\"4th Floor\",\"line2\":\"Unit #34\",\"city\":\"San Jose\",\"state\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\",\"phone\":\"011862212345678\"}},\"related_resources\":[]}],\"note_to_payer\":\"Contact us for any questions on your order.\",\"create_time\":\"2024-07-03T15:15:59Z\",\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2CWWMA1J304182XF146063N\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3CH94160HC201170R\",\"rel\":\"approval_url\",\"method\":\"REDIRECT\"},{\"href\":\"https://api.sandbox.paypal.com/v1/payments/payment/PAYID-M2CWWMA1J304182XF146063N/execute\",\"rel\":\"execute\",\"method\":\"POST\"}]}",
+    "headers" : {
+      "cache-control" : "max-age=0, no-cache, no-store, must-revalidate",
+      "traceparent" : "00-0000000000000000000ca850d80fb6c3-26906198fb7f4e80-01",
+      "server-timing" : "traceparent;desc=\"00-0000000000000000000ca850d80fb6c3-71294f5354249e2a-01\"",
+      "server" : "nginx",
+      "http_x_pp_az_locator" : "ccg18.slc",
+      "paypal-debug-id" : "ca850d80fb6c3",
+      "content-type" : "application/json;charset=UTF-8",
+      "strict-transport-security" : "max-age=31536000; includeSubDomains",
+      "x-backend-info" : "v=1;name=2k1u3gOGb2cebCyZJujTUN--F_ccg18_wju_origin_api_m_2_sandbox_paypal_com;ip=34.106.111.220;port=443;ssl=1;max=200;ka_ns=0;tka_s=300;tki_s=10;tkp=3;host=api-m.sandbox.paypal.com;min_tls=;max_tls=;sni=edge.sandbox.paypal.com;cert_host=edge.sandbox.paypal.com;ciphers=;check_cert=1;no_reneg=1;to_ns=1000000000;fbto_ns=59000000000;bbto_ns=10000000000",
+      "Accept-Ranges" : "bytes",
+      "Via" : "1.1 varnish, 1.1 varnish",
+      "Edge-Control" : "max-age=0",
+      "Date" : "Wed, 03 Jul 2024 15:16:00 GMT",
+      "X-Served-By" : "cache-qpg1262-QPG, cache-qpg1262-QPG, cache-hyd1100021-HYD",
+      "X-Cache" : "MISS, MISS, MISS",
+      "X-Cache-Hits" : "0, 0, 0",
+      "X-Timer" : "S1720019760.501241,VS0,VE833",
+      "Vary" : "Accept-Encoding"
+    }
+  },
+  "uuid" : "d4be6405-4b0e-43c3-aed0-9472ade07e97",
+  "persistent" : true,
+  "insertionIndex" : 2
+}
