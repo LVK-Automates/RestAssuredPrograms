@@ -15,8 +15,8 @@ public class Paypal_Payments {
 	
 	static String accessToken;
 	
-	public static final String clientID = "AZzzwbjFHC8JLtQibtO2n1tslH0xi4Z2Gog5zh27gveDJSlhAUiVAF1IoDiRpU0aPYp7CvKDqiAoNB_i";
-	public static final String clientSecret = "EDsjq2LBtfZNXU1ggWOFGixqkSwlxmCPJNJuGXEDsM_6CYOhP1MVEs-DOpDJb7QMvPeSDIuOnH9Dywvs"; 
+	public static final String clientID = "yourClientID";
+	public static final String clientSecret = "yourClientSecret"; 
 	
 	@BeforeMethod
 	public void getToken() {
